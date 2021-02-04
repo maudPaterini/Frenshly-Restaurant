@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css2?family=Athiti&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="icon" type="image/gif" href="instructions/ressources/images/favicon.png" />
+	<link rel="stylesheet" href="theme.css">
+    <title>Freshly Restaurant</title>
+</head>
+
+<body class="page-menu">
+
+	<header>
+		<div class="logo">
+			<img src="instructions/ressources/images/logo.png" alt="Logo Freshly Restaurant">
+			<h1>Freshly Restaurant</h1>
+		</div>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<a href="menus.html">Menus</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+	</header>
+
+	<main class="container">
+
+		<section>
+			<h2>Details of our menus</h2>
+				<p>Choose your main course according to your menu !</p>
+			
+                	<!--MIXITUP-->
+					<div class="controls">
+						<button type="button" class="control" data-filter="all">All</button>
+						<button type="button" class="control" data-filter=".green">Meat</button>
+						<button type="button" class="control" data-filter=".blue">Vegan</button>
+						<button type="button" class="control" data-filter=".pink">Fish</button>
+					</div>
+
+					<article>
+						<div data-ref="mixitup-container grid">
+							<div class="item pink" data-ref="mixitup-target">
+								<figure>
+									<img src="instructions/ressources/menus/fish-01.jpg" alt="Fish">
+									<figcaption>
+										<p><p><i class="fas fa-utensils"></i></p></p>
+										<p>Grilled mussels</p>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="item blue" data-ref="mixitup-target">
+								<figure>
+									<img src="instructions/ressources/menus/vegan-03.jpg" alt="Vegan">
+									<figcaption>
+										<p><p><i class="fas fa-utensils"></i></p></p>
+										<p>Mixed vegetables</p>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="item green" data-ref="mixitup-target">
+								<figure>
+									<img src="instructions/ressources/menus/meat-03.jpg" alt="Meat">
+									<figcaption>
+										<p><p><i class="fas fa-utensils"></i></p></p>
+										<p>Freshly kebabs</p>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="item pink" data-ref="mixitup-target">
+								<figure>
+									<img src="instructions/ressources/menus/fish-02.jpg" alt="Fish">
+									<figcaption>
+										<p><p><i class="fas fa-utensils"></i></p></p>
+										<p>Cajun shrimp</p>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="item green" data-ref="mixitup-target">
+								<figure>
+									<img src="instructions/ressources/menus/meat-01.jpg" alt="Meat">
+									<figcaption>
+										<p><p><i class="fas fa-utensils"></i></p></p>
+										<p>Freshly burger</p>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="item blue" data-ref="mixitup-target">
+								<figure>
+									<img src="instructions/ressources/menus/vegan-02.jpg" alt="Vegan">
+									<figcaption>
+										<p><p><i class="fas fa-utensils"></i></p></p>
+										<p>Grilled eggplants</p>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="item green" data-ref="mixitup-target">
+								<figure>
+									<img src="instructions/ressources/menus/meat-02.jpg" alt="Meat">
+									<figcaption>
+										<p><p><i class="fas fa-utensils"></i></p></p>
+										<p>Beef stew with pasta</p>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="item pink" data-ref="mixitup-target">
+								<figure>
+									<img src="instructions/ressources/menus/fish-03.jpg" alt="Fish">
+									<figcaption>
+										<p><p><i class="fas fa-utensils"></i></p></p>
+										<p>Grilled salmon</p>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="item blue" data-ref="mixitup-target">
+								<figure>
+									<img src="instructions/ressources/menus/vegan-01.jpg" alt="Vegan">
+									<figcaption>
+										<p><p><i class="fas fa-utensils"></i></p></p>
+										<p>Vegetable Jambalaya</p>
+									</figcaption>
+								</figure>
+							</div>
+	
+							<div class="gap"></div>
+							<div class="gap"></div>
+							<div class="gap"></div>
+						</div>
+					</article>
+
+					<script src="mixitup/mixitup.min.js"></script>
+
+					<script>
+						var containerEl = document.querySelector('[data-ref~="mixitup-container"]');
+
+						var mixer = mixitup(containerEl, {
+							selectors: {
+								target: '[data-ref~="mixitup-target"]'
+							}
+						});
+					</script>
+					<!--FIN INSTALLATION-->
+        </section>
+
+        <section>
+            <h2>Deserts</h2>
+                <p>Here are the deserts you can choose to finish your meal (included in your menu).</p>
+                    <article class="grid-menu">
+						<figure>
+							<img src="instructions/ressources/menus/desert-01.jpg" alt="Dessert">
+							<figcaption>
+								<p><p><i class="fas fa-utensils"></i></p></p>
+								<p>Tiramisu</p>
+							</figcaption>
+						</figure>
+                        <figure>
+							<img src="instructions/ressources/menus/desert-02.jpg" alt="Dessert">
+							<figcaption>
+								<p><p><i class="fas fa-utensils"></i></p></p>
+								<p>Freshly Pancakes</p>
+							</figcaption>
+						</figure>	
+                        <figure>
+							<img src="instructions/ressources/menus/desert-03.jpg" alt="Dessert">
+							<figcaption>
+								<p><p><i class="fas fa-utensils"></i></p></p>
+								<p>Redberries cup</p>
+							</figcaption>
+						</figure>
+                    </article>
+        </section>
+
+        <section>
+            <h2>Cocktails</h2>
+                <p>Soft drinkgs are included, but if you want you can order one of our excellent cocktails (not included in the menu).</p>
+                    <article class="grid-menu">
+						<figure>
+							<img src="instructions/ressources/menus/drink-01.jpg" alt="Drink">
+							<figcaption>
+								<p><i class="fas fa-utensils"></i></p>
+								<p>Winter Whishey</p>
+							</figcaption>
+						</figure>
+						<figure>
+							<img src="instructions/ressources/menus/drink-02.jpg" alt="Drink">	
+							<figcaption>
+								<p><i class="fas fa-utensils"></i></p>
+								<p>Paloma Cocktail</p>
+							</figcaption>
+						</figure>
+                        <figure>
+							<img src="instructions/ressources/menus/drink-03.jpg" alt="Drink">
+							<figcaption>
+								<p><i class="fas fa-utensils"></i></p>
+								<p>Bellini cocktails</p>
+							</figcaption>
+						</figure>
+                    </article>
+        </section>
+
+    </main>
+
+	<footer class="restaurant">
+		<section>
+			<h4>Opening hours</h4>
+			<ul>
+				<li>Monday: Closed</li>
+				<li>Tue-Wed : 9am - 10pm</li>
+				<li>Thu-Fri : 9am - 10pm</li>
+				<li>Sat-Sun : 5pm - 10pm</li>
+			</ul>
+		</section>
+		<section>
+			<h4>Contact</h4>
+			<address>
+				13, Christopher Street <br>
+				New York, <br>
+				NY 10014-3543
+			</address>
+			<p>+01 2000 800 9999</p>
+		</section>
+		<section>
+			<h4>Social networks</h4>
+			<div>
+				<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.pinterest.fr"><i class="fab fa-pinterest-p"></i></a>
+			</div>
+		</section>
+    </footer>
+    <footer class="footer">
+		<p><a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/"><img alt="Propriété de la 3W Academy" src="https://3wa.fr/wp-content/themes/3wa2015/img/logos/big.png"></a></p>
+		<p>Cet exercice de <a href="https://3wa.fr/">3W Academy</a> est mis à disposition <span class="soulignement">pour l'usage personnel des étudiants. Pas de rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification - International</span>.</p>
+		<p>Les autorisations au-delà du champ de cette lcience peuvent être obtenues auprès de <a href="mailto:contact@3wa.fr">contact@3wa.fr</a>. Les maquettes ont été réalisées par <a href="#">Catherine Denos</a>.</p>
+	</footer>
+
+</body>
+
+</html>

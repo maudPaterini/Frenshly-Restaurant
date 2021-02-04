@@ -1,0 +1,603 @@
+/* ************************************
+GENERALITE DE LA PAGE
+************************************ */
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html 
+{
+	font-size: 62.5%; /* ne pas changer, 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+}
+
+body 
+{
+	font-size: 1.8rem; /* on remets la taille du texte par défaut pour le body à 18px en utilisant les rem comme unité) */
+    font-family: "Athiti";
+}
+
+.container
+{
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+/* ************************************
+ENTETE ET PIED DE PAGE
+************************************ */
+
+/* Entête */
+
+header
+{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient( #ebe3db, white);
+    padding-top: 5rem;
+}
+
+.logo
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.freshly
+{
+    width: 15rem;
+    height: 15rem;
+    margin: auto;
+}
+
+
+/* Pied de page */
+
+.restaurant
+{
+    background-image: url("instructions/ressources/images/footer-bg.jpg");
+    color: white;
+    padding: 3rem 0 5rem 0;
+    font-size: 1.6rem;
+}
+
+.restaurant section p, .restaurant section address, .restaurant section ul
+{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.restaurant ul li 
+{
+    list-style-type: none;
+}
+
+.fab
+{
+    color: white;
+    font-size: 4rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+address
+{
+    font-style: normal;
+}
+
+.footer
+{
+    background-color: #444444;
+    color: white;
+    text-align: center;
+    padding : 2rem;
+    font-size: 1.6rem;
+}
+
+.footer img
+{
+    width: 5%;
+    height: 5%;
+}
+
+.soulignement
+{
+    text-decoration: underline;
+}
+
+.footer a
+{
+    color: white;
+}
+
+/* ************************************
+MENU DE NAVIGATION
+************************************ */
+
+nav
+{
+    display:flex;
+    flex-direction: column;
+    background-color: #ebe3db;
+}
+
+nav a
+{
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    border-top: 0.1rem solid #4c4343;
+    border-bottom: 0.1rem solid #4c4343;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover
+{
+    background-color: #4c4343;
+    color: white;
+}
+
+nav :nth-child(1), nav :nth-child(2), nav :nth-child(3)
+{
+    border-bottom: none
+}
+
+/* ************************************
+MISE EN FORME DES TITRES
+************************************ */
+
+h3::before, h2::before, h1::before
+{
+    content: "★ ";
+    color: #950000;
+}
+
+h3::after, h2::after, h1::after
+{
+    content: " ★";
+    color: #950000;
+}
+
+/* Titre de niveau 1 */
+
+h1
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:3rem;
+    padding: 1rem;
+}
+
+/* Titres de niveau 2 */
+
+h2
+{
+    font-family: "Merienda";
+    text-align: center;
+    font-size: 3rem;
+    margin: 5rem 2rem 5rem 2rem;
+}
+
+/* Titre de niveau 3 */
+
+h3
+{
+    font-family: "Merienda";
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+/* Titre de niveau 4 */
+
+h4
+{
+    font-family: "Merienda";
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 2rem;
+    border-bottom: 1px dashed white;
+    margin-top: 1rem;
+}
+
+/* ************************************
+CONTENU PRINCIPAL
+************************************ */
+
+/* Les images */
+
+img
+{
+    width: 100%;
+}
+
+.bar
+{
+    width: 90%;
+    margin: auto;
+}
+
+figure
+{
+	position: relative;
+}
+
+figure figcaption 
+{
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    border: 1rem solid white;
+    margin : 2rem;
+    font-weight: bold;
+}
+
+figure:hover figcaption 
+{
+    opacity: 0.9;
+    color: white;
+    background-color: rgba(76, 67, 67, 0.9);
+}
+
+.prix
+{
+    font-size: 5rem;
+    text-align: center;
+}
+
+figure figcaption p
+{
+    text-align: center;
+}
+
+figure .fa-utensils
+{
+    font-size: 3em;
+}
+
+/* Les sections */
+
+section
+{
+    text-align: center;
+}
+
+section p
+{
+    width: 90%;
+    margin-left: 4rem;
+    text-align: left;
+}
+
+/* Les articles */
+
+article
+{
+    background-color: #ebe3db;
+    margin-bottom: 5rem;
+    padding: 1rem 0;
+}
+
+article li
+{
+    list-style-type: none;
+    text-align : left;
+    border-bottom: 1px dashed  ;
+    padding: 1.5rem 0 1.5rem 5rem;
+}
+
+article li::before
+{
+    content: "★ "; 
+    color: #950000;
+}
+
+/* See more */
+
+.seemore
+{
+    padding : 1rem;
+    display: block;
+    background-color: #4c4343;
+    width: 90%;
+    margin: 2rem auto;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.fa-utensils
+{
+    margin-right: 1rem;
+}
+
+/* ************************************
+PAGE MENU
+************************************ */
+
+.page-menu section p
+{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grid-menu
+{
+    column-count: 2;
+}
+
+/* ************************************
+PAGE ABOUT
+************************************ */
+
+video
+{
+    width: 90%;
+}
+
+.page-about article p
+{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ************************************
+PAGE CONTACT
+************************************ */
+
+.page-contact article
+{
+    margin-top: 3rem;
+}
+
+.center
+{
+    text-align: center;
+}
+
+.etoile
+{
+    color: #950000;
+    font-weight: bold;
+}
+
+.colonne-formulaire
+{
+    column-count: 2;
+}
+
+form legend
+{
+    font-family: "Merienda";
+    font-size: 2.5rem;
+    padding: 2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+input
+{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+textarea
+{
+    text-align: left;
+    padding: 5rem;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.recquis::before
+{
+    content: "★";
+    color: #950000;
+    position: relative;
+    right: 1.5rem;
+}
+
+.toolbar button
+{
+    display: inline-block;
+    margin: 3rem 0 2rem 0;
+    background-color: #4c4343;
+    padding: 1rem;
+    width: 50%;
+    border-radius: 1em;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.toolbar
+{
+    text-align: center;
+}
+
+iframe
+{
+    margin-bottom: 2rem;
+    width: 90%;
+}
+
+/* ************************************
+LES MEDIAS QUERIES
+************************************ */
+
+/* Page d'accueil */
+
+@media screen and (min-width : 780px)
+{ 
+    nav 
+    {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    nav a 
+    {
+        border: none;
+    }
+    .restaurant 
+    {
+        display: flex;
+        justify-content: space-around;
+    }
+}   
+
+@media screen and (min-width : 980px)
+{
+    header
+    {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .logo
+    {
+        flex-direction: row;
+    }
+    nav
+    {
+        height: 5rem;
+        position: relative;
+        top: 6rem; 
+        background: none;
+    }
+    nav a 
+    {
+        margin-left: 3rem;
+        background-color: #ebe2db;
+    }
+    h1 
+    {
+        position: relative;
+        top: 5rem;
+    }
+    .bar
+    {
+        float: right;
+        width: 50%;
+        height: 50%;
+    }
+    .menu-accueil 
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu-accueil > * 
+    {
+      flex: 1;
+    }
+    .menu-accueil h2
+    {
+        flex-basis: 100%;
+    }
+    .menu-accueil article
+    {
+        margin-right: 2rem;
+    }
+}
+
+/* Page menu */
+
+@media screen and (min-width : 780px)
+{ 
+    .grid-menu
+    {
+        display:flex;
+    }
+    .grid-menu figure 
+    {
+        margin: 0.5rem;
+    }
+}   
+
+/* Page about */
+
+@media screen and (min-width : 780px)
+{ 
+    .page-about article
+    {
+        column-count: 2;
+    }
+
+}   
+
+@media screen and (min-width : 980px)
+{
+    .page-about article
+    {
+        column-count: 2;
+    }
+}
+
+/* ************************************
+PAGE CONTACT
+************************************ */
+
+@media screen and (min-width : 980px)
+{
+    .page-contact article
+    {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+
+/* ************************************
+INSTALLATION JQUERY
+************************************ */
+
+.slick-prev:before, .slick-next:before 
+{
+  color: black;
+}
+
+.slider
+{
+    width: 95%;
+    margin: 5rem auto;
+}
+
+
+/* ************************************
+INSTALLATION MIXITUP
+************************************ */
+
+.item, .grid 
+{
+    width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+    display: inline-block;
+    vertical-align: top;
+}
+
+.controls button
+{
+    background-color: #ebe2db;
+    margin: 1rem 1rem 3rem 1rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.6rem;
+    border: none;
+}
+
+.controls button:hover
+{
+    background-color: #950101;
+    color: white;
+}
